@@ -67,7 +67,7 @@ echo "net.ipv4.ip_forward=1" | sudo tee /etc/sysctl.d/99-kubernetes-ip-forward.c
 sudo sysctl --system
 
 # Initialize the Kubernetes master node
-echo "Initializing Kubernetes master node..."
+echo "Initializing Kubernetes master node..."  
 sudo kubeadm init --pod-network-cidr=192.168.0.0/16
 
 # Configure kubectl for the master node
